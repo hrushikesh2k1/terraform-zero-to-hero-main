@@ -30,7 +30,7 @@ variable "aws_access_key_id" {
 
 To store sensitive data in a secret management system, you would first create a secret in the secret management system. Then, you would configure Terraform to read the secret from the secret management system. 
 
-For example, to read a secret from HashiCorp Vault, you would use the vault_generic_secret data source.
+For example, to read a secret from HashiCorp Vault, you would use the ** vault_generic_secret** data source.
 
 data "vault_generic_secret" "aws_access_key_id" {
   path = "secret/aws/access_key_id"
@@ -42,7 +42,7 @@ variable "aws_access_key_id" {
 
 To encrypt the Terraform state file, you would first configure a secure remote backend for the state file. Then, you would encrypt the state file using the terraform encrypt command.
 
-terraform encrypt
+**terraform encrypt**
 
 To use environment variables, you would first define the environment variables in your operating system. Then, you would configure Terraform to read the environment variables when it is run. 
 
